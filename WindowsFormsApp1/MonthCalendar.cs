@@ -163,7 +163,8 @@ namespace QLSB
 
         private void MonthCalendar_Load(object sender, EventArgs e)
         {
-            DateTime day1 = DatePickerForMonth.Value.Date;           
+            //MessageBox.Show("da vao");
+            DateTime day1 = DateTime.Now;           
             DailyCalendarDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DailyCalendarDataGridView.DataSource = getDailyCalendar(day1.ToShortDateString()).Tables[0];
             DailyCalendarDataGridView.ReadOnly = true;
