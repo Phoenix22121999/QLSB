@@ -38,8 +38,7 @@
             this.San7 = new System.Windows.Forms.Button();
             this.San8 = new System.Windows.Forms.Button();
             this.San9 = new System.Windows.Forms.Button();
-            this.themsan = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBooking = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -158,25 +157,15 @@
             this.San9.Text = "Sân 9";
             this.San9.UseVisualStyleBackColor = true;
             // 
-            // themsan
+            // buttonBooking
             // 
-            this.themsan.Location = new System.Drawing.Point(93, 129);
-            this.themsan.Name = "themsan";
-            this.themsan.Size = new System.Drawing.Size(85, 23);
-            this.themsan.TabIndex = 2;
-            this.themsan.Text = "Thêm Sân";
-            this.themsan.UseVisualStyleBackColor = true;
-            this.themsan.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đặt Lịch";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBooking.Location = new System.Drawing.Point(12, 129);
+            this.buttonBooking.Name = "buttonBooking";
+            this.buttonBooking.Size = new System.Drawing.Size(75, 23);
+            this.buttonBooking.TabIndex = 3;
+            this.buttonBooking.Text = "Đặt Lịch";
+            this.buttonBooking.UseVisualStyleBackColor = true;
+            this.buttonBooking.Click += new System.EventHandler(this.button1_Click);
             // 
             // labelName
             // 
@@ -217,7 +206,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(184, 129);
+            this.button2.Location = new System.Drawing.Point(93, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 23);
             this.button2.TabIndex = 8;
@@ -234,8 +223,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridViewYard);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.themsan);
+            this.Controls.Add(this.buttonBooking);
             this.Controls.Add(this.bangsan);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -253,8 +241,7 @@
 
         private System.Windows.Forms.Button San1;
         private System.Windows.Forms.FlowLayoutPanel bangsan;
-        private System.Windows.Forms.Button themsan;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBooking;
         private System.Windows.Forms.Button San2;
         private System.Windows.Forms.Button San3;
         private System.Windows.Forms.Button San4;
