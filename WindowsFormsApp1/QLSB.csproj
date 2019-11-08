@@ -52,6 +52,12 @@
     <Compile Include="Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancel.Designer.cs">
+      <DependentUpon>Cancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cons.cs" />
     <Compile Include="DrinkBooking.cs">
       <SubType>Form</SubType>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DrinkBooking.resx">
       <DependentUpon>DrinkBooking.cs</DependentUpon>
