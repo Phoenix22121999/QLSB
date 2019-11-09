@@ -16,7 +16,7 @@ namespace QLSB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cancel());
+            Application.Run(new Main());
         }
     }
 }

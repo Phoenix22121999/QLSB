@@ -159,5 +159,11 @@ namespace QLSB
             DrinkBooking a = new DrinkBooking();
             a.ShowDialog();
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Cancel a = new Cancel();
+            a.Show();
+        }
     }
 }

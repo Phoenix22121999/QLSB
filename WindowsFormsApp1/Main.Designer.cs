@@ -44,6 +44,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewYard = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.bangsan.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYard)).BeginInit();
@@ -214,12 +215,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(12, 164);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 9;
+            this.buttonCancel.Text = "Hủy Lịch";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(439, 347);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridViewYard);
             this.Controls.Add(this.groupBox1);
@@ -255,6 +267,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewYard;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }
 
