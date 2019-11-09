@@ -57,3 +57,5 @@ E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Hour.Hour.resour
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.csproj.GenerateResource.cache
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.exe
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.pdb
+E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.Cancel.resources
+E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.DrinkInput.resources

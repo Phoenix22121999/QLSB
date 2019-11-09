@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BookPhoneNumber = new System.Windows.Forms.TextBox();
+            this.cancelDate = new System.Windows.Forms.TextBox();
             this.NumberPhoneLable = new System.Windows.Forms.Label();
-            this.BookID = new System.Windows.Forms.TextBox();
+            this.cancelID = new System.Windows.Forms.TextBox();
             this.IDLable = new System.Windows.Forms.Label();
             this.dataGridViewCancel = new System.Windows.Forms.DataGridView();
+            this.buttonFind = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCancel)).BeginInit();
             this.SuspendLayout();
             // 
-            // BookPhoneNumber
+            // cancelDate
             // 
-            this.BookPhoneNumber.Location = new System.Drawing.Point(12, 83);
-            this.BookPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.BookPhoneNumber.Name = "BookPhoneNumber";
-            this.BookPhoneNumber.Size = new System.Drawing.Size(185, 22);
-            this.BookPhoneNumber.TabIndex = 9;
+            this.cancelDate.Location = new System.Drawing.Point(13, 83);
+            this.cancelDate.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelDate.Name = "cancelDate";
+            this.cancelDate.Size = new System.Drawing.Size(185, 22);
+            this.cancelDate.TabIndex = 9;
             // 
             // NumberPhoneLable
             // 
@@ -55,13 +56,13 @@
             this.NumberPhoneLable.TabIndex = 8;
             this.NumberPhoneLable.Text = "Ngày đã đặt:";
             // 
-            // BookID
+            // cancelID
             // 
-            this.BookID.Location = new System.Drawing.Point(12, 29);
-            this.BookID.Margin = new System.Windows.Forms.Padding(4);
-            this.BookID.Name = "BookID";
-            this.BookID.Size = new System.Drawing.Size(185, 22);
-            this.BookID.TabIndex = 7;
+            this.cancelID.Location = new System.Drawing.Point(12, 29);
+            this.cancelID.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelID.Name = "cancelID";
+            this.cancelID.Size = new System.Drawing.Size(185, 22);
+            this.cancelID.TabIndex = 7;
             // 
             // IDLable
             // 
@@ -76,19 +77,30 @@
             // dataGridViewCancel
             // 
             this.dataGridViewCancel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCancel.Location = new System.Drawing.Point(70, 155);
+            this.dataGridViewCancel.Location = new System.Drawing.Point(205, 29);
             this.dataGridViewCancel.Name = "dataGridViewCancel";
             this.dataGridViewCancel.RowHeadersWidth = 51;
             this.dataGridViewCancel.RowTemplate.Height = 24;
-            this.dataGridViewCancel.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewCancel.Size = new System.Drawing.Size(536, 135);
             this.dataGridViewCancel.TabIndex = 10;
+            this.dataGridViewCancel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCancel_CellClick);
             // 
-            // buttonCancel
+            // buttonFind
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(122, 132);
+            this.buttonFind.Location = new System.Drawing.Point(16, 131);
+            this.buttonFind.Name = "buttonFind";
+            this.buttonFind.Size = new System.Drawing.Size(88, 33);
+            this.buttonFind.TabIndex = 11;
+            this.buttonFind.Text = "Tìm";
+            this.buttonFind.UseVisualStyleBackColor = true;
+            this.buttonFind.Click += new System.EventHandler(this.buttonFind_Click);
+            // 
+            // buttonCa
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(110, 131);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 33);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.Size = new System.Drawing.Size(87, 33);
+            this.buttonCancel.TabIndex = 12;
             this.buttonCancel.Text = "Hủy";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -97,12 +109,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 190);
+            this.ClientSize = new System.Drawing.Size(753, 190);
             this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.dataGridViewCancel);
-            this.Controls.Add(this.BookPhoneNumber);
+            this.Controls.Add(this.cancelDate);
             this.Controls.Add(this.NumberPhoneLable);
-            this.Controls.Add(this.BookID);
+            this.Controls.Add(this.cancelID);
             this.Controls.Add(this.IDLable);
             this.Name = "Cancel";
             this.Text = "Cancel";
@@ -115,11 +128,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox BookPhoneNumber;
+        private System.Windows.Forms.TextBox cancelDate;
         private System.Windows.Forms.Label NumberPhoneLable;
-        private System.Windows.Forms.TextBox BookID;
+        private System.Windows.Forms.TextBox cancelID;
         private System.Windows.Forms.Label IDLable;
         private System.Windows.Forms.DataGridView dataGridViewCancel;
+        private System.Windows.Forms.Button buttonFind;
         private System.Windows.Forms.Button buttonCancel;
     }
 }
