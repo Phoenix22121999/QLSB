@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Booking));
             this.BookName = new System.Windows.Forms.TextBox();
             this.BookingName = new System.Windows.Forms.Label();
             this.IDLable = new System.Windows.Forms.Label();
@@ -180,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(404, 348);
             this.Controls.Add(this.dataGridViewBooking);
             this.Controls.Add(this.YardComboBox);

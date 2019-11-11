@@ -47,52 +47,64 @@ namespace QLSB
             //dataGridViewCancel.Rows[index].Cells[];
             using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
             {
-                String lenh = "DELETE FROM HoaDon WHERE HoaDon.MaKhach =  "+"'"+ dataGridViewCancel.Rows[index].Cells[1].Value + "'";
-                String lenh2;
-                connection.Open();
-                SqlCommand command = new SqlCommand(lenh, connection);
-                command.ExecuteNonQuery();
-                connection.Close();
-                
-                
-                    
-                    if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 1")
-                    {
-                        lenh2 = "UPDATE Lich SET San1 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
-
+                try {
+                    connection.Open();
+                    String lenh = "DELETE FROM HoaDon WHERE HoaDon.MaKhach =  " + "'" + dataGridViewCancel.Rows[index].Cells[1].Value + "'";
+                    SqlCommand command = new SqlCommand(lenh, connection);
+                    command.ExecuteNonQuery();
+                } catch (Exception a)
+                {
+                    MessageBox.Show(a.ToString());
                 }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 2")
+
+                try {                  
+                    String lenh2;
+                    MessageBox.Show(dataGridViewCancel.Rows[index].Cells[4].Value.ToString());
+                    String temp = dataGridViewCancel.Rows[index].Cells[4].Value.ToString();
+                    if (String.Compare(temp,"Sân 1",true)==0)
                     {
-                        lenh2 = "UPDATE Lich SET San2 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San1 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio"+ "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                    }   
+                    else if (String.Compare(temp, "Sân 2", true) == 0)
+                    {
+                        lenh2 = "UPDATE Lich SET San2 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 3")
+                    else if (String.Compare(temp, "Sân 3", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San3 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San3 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 4")
+                    else if (String.Compare(temp, "Sân 4", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San4 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San4 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 5")
+                    else if (String.Compare(temp, "Sân 5", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San5 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San5 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 6")
+                    else if (String.Compare(temp, "Sân 6", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San6 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San6 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 7")
+                    else if (String.Compare(temp, "Sân 7", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San7 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San7 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
-                    else if (dataGridViewCancel.Rows[index].Cells[4].Value == "Sân 8")
+                    else if (String.Compare(temp, "Sân 8", true) == 0)
                     {
-                        lenh2 = "UPDATE Lich SET San8 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San8 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
                     else
                     {
-                        lenh2 = "UPDATE Lich SET San9 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "'" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
+                        lenh2 = "UPDATE Lich SET San9 = 0 WHERE Lich.MaNgay =  " + "'" + dataGridViewCancel.Rows[index].Cells[2].Value + "'" + " AND " + "Lich.MaGio" + "= '" + dataGridViewCancel.Rows[index].Cells[3].Value + "'";
                     }
+                    SqlCommand command2 = new SqlCommand(lenh2, connection);
+                    MessageBox.Show(lenh2);
+                    command2.ExecuteNonQuery();
+                    connection.Close();
+                }catch(Exception a)
+                {
+                    MessageBox.Show(a.ToString());
+                }
             }
         }
 
