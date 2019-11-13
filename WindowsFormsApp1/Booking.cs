@@ -29,6 +29,7 @@ namespace QLSB
            
             HourComboBox.Items.AddRange(Cons.gio);
             YardComboBox.Items.AddRange(Cons.san);
+            Design();
         }
 
         public event Action ReloadMonthCalendar;
@@ -41,8 +42,9 @@ namespace QLSB
             
             try
            {
-                String MaKhach = BookingDate.ToShortDateString() + BookID.Text;
+                
                 String lenh = "insert into Khach values(@MaKhach,@TenKhach,@CMND,@SDT)";
+                String MaKhach = BookingDate.ToShortDateString() + BookID.Text;
                 DateTime day1 = BookingDate.Date;
                 dataGridViewBooking.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewBooking.DataSource = getDailyCalendar(day1.ToShortDateString()).Tables[0];
@@ -50,8 +52,9 @@ namespace QLSB
                 //MessageBox.Show(dataGridViewBooking.Rows[0].Cells[0].Value.ToString());
 
                
-                if (dataGridViewBooking.Rows[0].Cells[0].Value != null)
+                if (dataGridViewBooking.Rows[0].Cells[0].Value != null )
                 {
+                    
                     //MessageBox.Show(dataGridViewBooking.Rows[0].Cells[0].Value.ToString());
                     SqlConnection connection = new SqlConnection(Cons.sqlLink);
                     connection.Open();
@@ -65,7 +68,8 @@ namespace QLSB
                     switch (YardComboBox.Text)
                     {
                         case "Sân 1":
-                            lenh4 = "UPDATE Lich SET San1 = 1  Lich.MaNgay like " + "'" + BookingDate.Date.ToShortDateString() + "' and Lich.MaGio like '" + HourComboBox.Text + "'";
+                            lenh4 = "UPDATE Lich SET San1 = 1 where Lich.MaNgay like " + "'" + BookingDate.Date.ToShortDateString() + "' and Lich.MaGio like '" + HourComboBox.Text + "'";
+                            MessageBox.Show(""+lenh4);
                             command4 = new SqlCommand(lenh4, connection);
                             command4.ExecuteNonQuery();
                             break;
@@ -111,14 +115,14 @@ namespace QLSB
                             break;
 
                     }
-                    
+                    MakeHD();
                     Close();
 
 
                 }
                 else
                 {
-                    try { 
+                    try {
                         
                         //String lenh2 = "insert into LichNgay(MaNgay,Gio,@San) values(@MaNgay,@gio,@TrueFalse)";
                         using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
@@ -175,37 +179,23 @@ namespace QLSB
                             command2.Parameters.Add("@gio", HourComboBox.Text);
                             command2.ExecuteNonQuery();
                             command.ExecuteNonQuery();
-                            
+                            MakeHD();
 
                         }
                     this.DialogResult = DialogResult.OK;
                     Close();
                     }catch(Exception a)
                     {
-                        MessageBox.Show("7" + a);
+                        MessageBox.Show("Đã xảy ra lỗi");
                     }
 
                 }
-                using (SqlConnection connection1 = new SqlConnection(Cons.sqlLink))
-                {
-                    connection1.Open();
-                    String lenh3 = "insert into HoaDon(MaHoaDon,MaKhach,MaNgay,MaGio,San,TongTien) values(@MaHoaDon,@MaKhach,@MaNgay,@MaGio,@San,@TongTien)";
-                    SqlCommand command3 = new SqlCommand(lenh3, connection1);  
-                    
-                    command3.Parameters.Add("@MaHoaDon", MaKhach + day1.ToShortDateString() + HourComboBox.Text);
-                    command3.Parameters.Add("@MaKhach", MaKhach);
-                    command3.Parameters.Add("@MaNgay", BookingDate.ToShortDateString());
-                    command3.Parameters.Add("@MaGio", HourComboBox.Text);
-                    command3.Parameters.Add("@TongTien", 120000);
-                    command3.Parameters.Add("@San", YardComboBox.Text);
-                    command3.ExecuteNonQuery();
-                    connection1.Close();
-                }
+               
                
             }
            catch(Exception a)
            {
-                MessageBox.Show("222"+a);
+                MessageBox.Show("Đã xảy ra lỗi");
            }
           
        }
@@ -227,6 +217,45 @@ namespace QLSB
 
             return data;
         }
+        public void MakeHD()
+        {
+            using (SqlConnection connection1 = new SqlConnection(Cons.sqlLink))
+            {
+                connection1.Open();
+                String MaKhach = BookingDate.ToShortDateString() + BookID.Text;
+                DateTime day1 = BookingDate.Date;
+                String lenh3 = "insert into HoaDon(MaHoaDon,MaKhach,MaNgay,MaGio,San,TongTien) values(@MaHoaDon,@MaKhach,@MaNgay,@MaGio,@San,@TongTien)";
+                SqlCommand command3 = new SqlCommand(lenh3, connection1);
+
+                command3.Parameters.Add("@MaHoaDon", MaKhach + day1.ToShortDateString() + HourComboBox.Text);
+                command3.Parameters.Add("@MaKhach", MaKhach);
+                command3.Parameters.Add("@MaNgay", BookingDate.ToShortDateString());
+                command3.Parameters.Add("@MaGio", HourComboBox.Text);
+                command3.Parameters.Add("@TongTien", 120000);
+                command3.Parameters.Add("@San", YardComboBox.Text);
+                command3.ExecuteNonQuery();
+                connection1.Close();
+            }
+        }
+        public void Design()
+        {
+            iDLabel.BackColor = Color.Transparent;
+            nameLabel.BackColor = Color.Transparent;
+            numberPhoneLable.BackColor = Color.Transparent;
+            hourLabel.BackColor = Color.Transparent;
+            yardLable.BackColor = Color.Transparent;
+            iDLabel.ForeColor = Color.White;
+            BookingButton.BackColor = Color.FromArgb(255,75,75,75);
+            BookingButton.FlatAppearance.BorderColor = Color.FromArgb(255, 0, 0, 0);
+            BookingButton.ForeColor = Color.White;
+            nameLabel.ForeColor = Color.White;
+            numberPhoneLable.ForeColor = Color.White;
+            hourLabel.ForeColor = Color.White;
+            yardLable.ForeColor = Color.White;
+            panelBooking.BackColor = Color.FromArgb(200,75,75,75);
+        
+        }
+
 
     }
 }

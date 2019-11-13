@@ -30,6 +30,7 @@
         {
             this.groupBoxDrink = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.dataGridViewStore = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewDrinkBooking = new System.Windows.Forms.DataGridView();
             this.groupBoxDrink.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrinkBooking)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +84,16 @@
             this.label8.Size = new System.Drawing.Size(113, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Chai/12.000VND";
+            // 
+            // dataGridViewStore
+            // 
+            this.dataGridViewStore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStore.Location = new System.Drawing.Point(75, 50);
+            this.dataGridViewStore.Name = "dataGridViewStore";
+            this.dataGridViewStore.RowHeadersWidth = 51;
+            this.dataGridViewStore.RowTemplate.Height = 24;
+            this.dataGridViewStore.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewStore.TabIndex = 9;
             // 
             // label7
             // 
@@ -260,6 +272,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 443);
             this.Controls.Add(this.dataGridViewDrinkBooking);
+            this.Controls.Add(this.dataGridViewStore);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBoxHour);
@@ -274,6 +287,7 @@
             this.Load += new System.EventHandler(this.DrinkBooking_Load);
             this.groupBoxDrink.ResumeLayout(false);
             this.groupBoxDrink.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrinkBooking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -302,5 +316,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridViewDrinkBooking;
+        private System.Windows.Forms.DataGridView dataGridViewStore;
     }
 }

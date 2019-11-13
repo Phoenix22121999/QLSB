@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBoxDrink = new System.Windows.Forms.GroupBox();
+            this.dataGridViewInput = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.waterText = new System.Windows.Forms.TextBox();
             this.stingText = new System.Windows.Forms.TextBox();
             this.iceTeaText = new System.Windows.Forms.TextBox();
@@ -37,12 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonInput = new System.Windows.Forms.Button();
             this.groupBoxDrink.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxDrink
@@ -59,12 +61,59 @@
             this.groupBoxDrink.Controls.Add(this.label2);
             this.groupBoxDrink.Controls.Add(this.label1);
             this.groupBoxDrink.Controls.Add(this.label4);
+            this.groupBoxDrink.Controls.Add(this.dataGridViewInput);
             this.groupBoxDrink.Location = new System.Drawing.Point(12, 12);
             this.groupBoxDrink.Name = "groupBoxDrink";
             this.groupBoxDrink.Size = new System.Drawing.Size(280, 233);
             this.groupBoxDrink.TabIndex = 1;
             this.groupBoxDrink.TabStop = false;
             this.groupBoxDrink.Text = "Đồ Uống";
+            // 
+            // dataGridViewInput
+            // 
+            this.dataGridViewInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInput.Location = new System.Drawing.Point(155, 0);
+            this.dataGridViewInput.Name = "dataGridViewInput";
+            this.dataGridViewInput.RowHeadersWidth = 51;
+            this.dataGridViewInput.RowTemplate.Height = 24;
+            this.dataGridViewInput.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewInput.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(151, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 17);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Chai";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(151, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Ca";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(151, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Lon";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(151, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Chai";
             // 
             // waterText
             // 
@@ -136,62 +185,29 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Red Bull";
             // 
-            // label8
+            // buttonInput
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(151, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Chai";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(151, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Ca";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(151, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Lon";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(151, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Chai";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(113, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Nhập";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonInput.Location = new System.Drawing.Point(113, 252);
+            this.buttonInput.Name = "buttonInput";
+            this.buttonInput.Size = new System.Drawing.Size(86, 38);
+            this.buttonInput.TabIndex = 3;
+            this.buttonInput.Text = "Nhập";
+            this.buttonInput.UseVisualStyleBackColor = true;
+            this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
             // 
             // DrinkInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(214, 302);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonInput);
             this.Controls.Add(this.groupBoxDrink);
             this.Name = "DrinkInput";
             this.Text = "Nhập Nước";
+            this.Load += new System.EventHandler(this.DrinkInput_Load);
             this.groupBoxDrink.ResumeLayout(false);
             this.groupBoxDrink.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,6 +227,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonInput;
+        private System.Windows.Forms.DataGridView dataGridViewInput;
     }
 }

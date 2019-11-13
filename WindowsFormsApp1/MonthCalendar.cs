@@ -176,6 +176,7 @@ namespace QLSB
 
             String lenh = "select * from Lich where Lich.MaNgay like " + "'" + MaNgay + "'";
             //MessageBox.Show(lenh);
+
             using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
             {
                 connection.Open();
