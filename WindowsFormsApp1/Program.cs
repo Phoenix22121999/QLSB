@@ -16,7 +16,7 @@ namespace QLSB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Booking(DateTime.Now));
+            Application.Run(new Main());
             
         }
     }

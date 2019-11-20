@@ -54,7 +54,7 @@
             // 
             // BookName
             // 
-            this.BookName.Location = new System.Drawing.Point(3, 28);
+            this.BookName.Location = new System.Drawing.Point(4, 30);
             this.BookName.Margin = new System.Windows.Forms.Padding(4);
             this.BookName.Name = "BookName";
             this.BookName.Size = new System.Drawing.Size(365, 22);
@@ -63,26 +63,28 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.nameLabel.Location = new System.Drawing.Point(4, 6);
             this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(104, 17);
+            this.nameLabel.Size = new System.Drawing.Size(136, 24);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Người Đặt Sân:";
             // 
             // iDLabel
             // 
             this.iDLabel.AutoSize = true;
+            this.iDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.iDLabel.Location = new System.Drawing.Point(4, 56);
             this.iDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.iDLabel.Name = "iDLabel";
-            this.iDLabel.Size = new System.Drawing.Size(52, 17);
+            this.iDLabel.Size = new System.Drawing.Size(71, 24);
             this.iDLabel.TabIndex = 2;
             this.iDLabel.Text = "CMND:";
             // 
             // BookID
             // 
-            this.BookID.Location = new System.Drawing.Point(3, 76);
+            this.BookID.Location = new System.Drawing.Point(3, 83);
             this.BookID.Margin = new System.Windows.Forms.Padding(4);
             this.BookID.Name = "BookID";
             this.BookID.Size = new System.Drawing.Size(365, 22);
@@ -90,36 +92,38 @@
             // 
             // BookPhoneNumber
             // 
-            this.BookPhoneNumber.Location = new System.Drawing.Point(3, 130);
+            this.BookPhoneNumber.Location = new System.Drawing.Point(3, 137);
             this.BookPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.BookPhoneNumber.Name = "BookPhoneNumber";
-            this.BookPhoneNumber.Size = new System.Drawing.Size(361, 22);
+            this.BookPhoneNumber.Size = new System.Drawing.Size(366, 22);
             this.BookPhoneNumber.TabIndex = 5;
             // 
             // numberPhoneLable
             // 
             this.numberPhoneLable.AutoSize = true;
+            this.numberPhoneLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numberPhoneLable.Location = new System.Drawing.Point(4, 109);
             this.numberPhoneLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.numberPhoneLable.Name = "numberPhoneLable";
-            this.numberPhoneLable.Size = new System.Drawing.Size(102, 17);
+            this.numberPhoneLable.Size = new System.Drawing.Size(135, 24);
             this.numberPhoneLable.TabIndex = 4;
             this.numberPhoneLable.Text = "Số Điện Thoại:";
             // 
             // hourLabel
             // 
             this.hourLabel.AutoSize = true;
-            this.hourLabel.Location = new System.Drawing.Point(4, 158);
+            this.hourLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.hourLabel.Location = new System.Drawing.Point(4, 163);
             this.hourLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hourLabel.Name = "hourLabel";
-            this.hourLabel.Size = new System.Drawing.Size(34, 17);
+            this.hourLabel.Size = new System.Drawing.Size(44, 24);
             this.hourLabel.TabIndex = 6;
             this.hourLabel.Text = "Giờ:";
             // 
             // HourComboBox
             // 
             this.HourComboBox.FormattingEnabled = true;
-            this.HourComboBox.Location = new System.Drawing.Point(3, 178);
+            this.HourComboBox.Location = new System.Drawing.Point(3, 186);
             this.HourComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.HourComboBox.Name = "HourComboBox";
             this.HourComboBox.Size = new System.Drawing.Size(165, 24);
@@ -127,10 +131,11 @@
             // 
             // BookingButton
             // 
-            this.BookingButton.Location = new System.Drawing.Point(3, 268);
+            this.BookingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.BookingButton.Location = new System.Drawing.Point(4, 274);
             this.BookingButton.Margin = new System.Windows.Forms.Padding(4);
             this.BookingButton.Name = "BookingButton";
-            this.BookingButton.Size = new System.Drawing.Size(165, 28);
+            this.BookingButton.Size = new System.Drawing.Size(166, 50);
             this.BookingButton.TabIndex = 8;
             this.BookingButton.Text = "Thuê";
             this.BookingButton.UseVisualStyleBackColor = true;
@@ -139,17 +144,18 @@
             // yardLable
             // 
             this.yardLable.AutoSize = true;
-            this.yardLable.Location = new System.Drawing.Point(4, 207);
+            this.yardLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.yardLable.Location = new System.Drawing.Point(4, 214);
             this.yardLable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.yardLable.Name = "yardLable";
-            this.yardLable.Size = new System.Drawing.Size(33, 17);
+            this.yardLable.Size = new System.Drawing.Size(43, 24);
             this.yardLable.TabIndex = 9;
             this.yardLable.Text = "Sân";
             // 
             // YardComboBox
             // 
             this.YardComboBox.FormattingEnabled = true;
-            this.YardComboBox.Location = new System.Drawing.Point(3, 227);
+            this.YardComboBox.Location = new System.Drawing.Point(4, 242);
             this.YardComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.YardComboBox.Name = "YardComboBox";
             this.YardComboBox.Size = new System.Drawing.Size(165, 24);
@@ -181,6 +187,8 @@
             // 
             // panelBooking
             // 
+            this.panelBooking.AutoScroll = true;
+            this.panelBooking.AutoSize = true;
             this.panelBooking.Controls.Add(this.nameLabel);
             this.panelBooking.Controls.Add(this.BookingButton);
             this.panelBooking.Controls.Add(this.YardComboBox);
@@ -195,18 +203,23 @@
             this.panelBooking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBooking.Location = new System.Drawing.Point(0, 0);
             this.panelBooking.Name = "panelBooking";
-            this.panelBooking.Size = new System.Drawing.Size(378, 318);
+            this.panelBooking.Size = new System.Drawing.Size(372, 337);
             this.panelBooking.TabIndex = 12;
             // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(378, 318);
+            this.ClientSize = new System.Drawing.Size(372, 337);
             this.Controls.Add(this.dataGridViewBooking);
             this.Controls.Add(this.panelBooking);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Booking";
             this.Text = "Booking";
             this.Load += new System.EventHandler(this.Booking_Load);
@@ -216,6 +229,7 @@
             this.panelBooking.ResumeLayout(false);
             this.panelBooking.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -30,7 +30,6 @@
         {
             this.groupBoxDrink = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridViewStore = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewStore = new System.Windows.Forms.DataGridView();
             this.comboBoxYard = new System.Windows.Forms.ComboBox();
             this.DrinkBook = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -84,16 +84,6 @@
             this.label8.Size = new System.Drawing.Size(113, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Chai/12.000VND";
-            // 
-            // dataGridViewStore
-            // 
-            this.dataGridViewStore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStore.Location = new System.Drawing.Point(75, 50);
-            this.dataGridViewStore.Name = "dataGridViewStore";
-            this.dataGridViewStore.RowHeadersWidth = 51;
-            this.dataGridViewStore.RowTemplate.Height = 24;
-            this.dataGridViewStore.Size = new System.Drawing.Size(0, 0);
-            this.dataGridViewStore.TabIndex = 9;
             // 
             // label7
             // 
@@ -192,6 +182,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Red Bull";
             // 
+            // dataGridViewStore
+            // 
+            this.dataGridViewStore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStore.Location = new System.Drawing.Point(75, 50);
+            this.dataGridViewStore.Name = "dataGridViewStore";
+            this.dataGridViewStore.RowHeadersWidth = 51;
+            this.dataGridViewStore.RowTemplate.Height = 24;
+            this.dataGridViewStore.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewStore.TabIndex = 9;
+            // 
             // comboBoxYard
             // 
             this.comboBoxYard.FormattingEnabled = true;
@@ -281,6 +281,7 @@
             this.Controls.Add(this.DrinkBook);
             this.Controls.Add(this.comboBoxYard);
             this.Controls.Add(this.groupBoxDrink);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "DrinkBooking";
             this.Text = "Đặt nước";

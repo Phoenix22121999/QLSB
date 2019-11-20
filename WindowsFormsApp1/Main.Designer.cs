@@ -237,6 +237,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonBooking);
             this.Controls.Add(this.bangsan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sân Bóng Mini";

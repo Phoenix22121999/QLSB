@@ -95,6 +95,7 @@
             this.Controls.Add(this.dataGridViewCancel);
             this.Controls.Add(this.cancelID);
             this.Controls.Add(this.IDLable);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Cancel";
             this.Text = "Cancel";
             this.Load += new System.EventHandler(this.Cancel_Load);

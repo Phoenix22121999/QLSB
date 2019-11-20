@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBoxDrink = new System.Windows.Forms.GroupBox();
-            this.dataGridViewInput = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewInput = new System.Windows.Forms.DataGridView();
             this.buttonInput = new System.Windows.Forms.Button();
             this.groupBoxDrink.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInput)).BeginInit();
@@ -68,16 +68,6 @@
             this.groupBoxDrink.TabIndex = 1;
             this.groupBoxDrink.TabStop = false;
             this.groupBoxDrink.Text = "Đồ Uống";
-            // 
-            // dataGridViewInput
-            // 
-            this.dataGridViewInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInput.Location = new System.Drawing.Point(155, 0);
-            this.dataGridViewInput.Name = "dataGridViewInput";
-            this.dataGridViewInput.RowHeadersWidth = 51;
-            this.dataGridViewInput.RowTemplate.Height = 24;
-            this.dataGridViewInput.Size = new System.Drawing.Size(0, 0);
-            this.dataGridViewInput.TabIndex = 13;
             // 
             // label8
             // 
@@ -185,6 +175,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Red Bull";
             // 
+            // dataGridViewInput
+            // 
+            this.dataGridViewInput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInput.Location = new System.Drawing.Point(155, 0);
+            this.dataGridViewInput.Name = "dataGridViewInput";
+            this.dataGridViewInput.RowHeadersWidth = 51;
+            this.dataGridViewInput.RowTemplate.Height = 24;
+            this.dataGridViewInput.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewInput.TabIndex = 13;
+            // 
             // buttonInput
             // 
             this.buttonInput.Location = new System.Drawing.Point(113, 252);
@@ -202,6 +202,7 @@
             this.ClientSize = new System.Drawing.Size(214, 302);
             this.Controls.Add(this.buttonInput);
             this.Controls.Add(this.groupBoxDrink);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DrinkInput";
             this.Text = "Nhập Nước";
             this.Load += new System.EventHandler(this.DrinkInput_Load);
