@@ -40,14 +40,18 @@
             this.San9 = new System.Windows.Forms.Button();
             this.buttonBooking = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewYard = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.dataGridViewStaff = new System.Windows.Forms.DataGridView();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.labelID = new System.Windows.Forms.Label();
             this.bangsan.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // San1
@@ -177,23 +181,24 @@
             this.labelName.TabIndex = 4;
             this.labelName.Text = "Tên Nhân Viên:";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 22);
-            this.textBox1.TabIndex = 5;
+            this.textBoxName.Location = new System.Drawing.Point(119, 13);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(151, 22);
+            this.textBoxName.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelID);
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.labelName);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Location = new System.Drawing.Point(12, 18);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(299, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // dataGridViewYard
             // 
@@ -225,12 +230,39 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // dataGridViewStaff
+            // 
+            this.dataGridViewStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewStaff.Location = new System.Drawing.Point(42, 165);
+            this.dataGridViewStaff.Name = "dataGridViewStaff";
+            this.dataGridViewStaff.RowHeadersWidth = 51;
+            this.dataGridViewStaff.RowTemplate.Height = 24;
+            this.dataGridViewStaff.Size = new System.Drawing.Size(0, 0);
+            this.dataGridViewStaff.TabIndex = 10;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(119, 41);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(151, 22);
+            this.textBoxID.TabIndex = 6;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(6, 44);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(48, 17);
+            this.labelID.TabIndex = 7;
+            this.labelID.Text = "CMND";
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(439, 347);
+            this.Controls.Add(this.dataGridViewStaff);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridViewYard);
@@ -246,6 +278,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,11 +297,14 @@
         private System.Windows.Forms.Button San8;
         private System.Windows.Forms.Button San9;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewYard;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DataGridView dataGridViewStaff;
+        private System.Windows.Forms.Label labelID;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }
 

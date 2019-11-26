@@ -13,8 +13,10 @@ namespace QLSB
 {
     public partial class Main : Form
     {
-        public Main()
+        String staff;
+        public Main(String staff)
         {
+            this.staff = staff;
             InitializeComponent();
         }
         protected int sosan = 2;
@@ -75,7 +77,7 @@ namespace QLSB
             DateTime now = DateTime.Now;
             String DateNow= now.ToShortDateString();
             YardLoad();
-            
+            loadData();
             try
             {
                // MessageBox.Show(dataGridViewYard.Rows[0].Cells[2].Value.ToString());
@@ -164,6 +166,26 @@ namespace QLSB
         {
             Cancel a = new Cancel();
             a.Show();
+        }
+        private void loadData()
+        {
+            String lenh = "select * from NhanVien where MaNV = " + "'" + staff + "'";
+            //MessageBox.Show(lenh);
+            DataSet data = new DataSet();
+            using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
+            {
+                connection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(lenh, connection);
+                adapter.Fill(data);
+                dataGridViewStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewStaff.DataSource = data.Tables[0];
+                dataGridViewStaff.ReadOnly = true;
+                connection.Close();
+            }
+            textBoxName.Text = dataGridViewStaff.Rows[0].Cells[1].Value.ToString();
+            textBoxName.Enabled = false;
+            textBoxID.Text = dataGridViewStaff.Rows[0].Cells[2].Value.ToString();
+            textBoxID.Enabled = false;
         }
     }
 }

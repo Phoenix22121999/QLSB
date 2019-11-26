@@ -25,35 +25,7 @@ namespace QLSB
 
         private void Login_Load(object sender, EventArgs e)
         {
-           
-            LoginLabel.BackColor = Color.Transparent;
-            
-            PanelLogin3.BackColor = Color.Transparent;
-            UserLabel.ForeColor = Color.FromArgb(255, 250, 255);
-            PassLabel.ForeColor = Color.FromArgb(255, 250, 255);
-            // textboxes background color and forcolor
-            UserTextBox.BackColor = Color.FromArgb(149, 165, 166);
-            PassTextBox.BackColor = Color.FromArgb(149, 165, 166);
-            UserTextBox.ForeColor = Color.FromArgb(255, 255, 255);
-            PassTextBox.ForeColor = Color.FromArgb(255, 255, 255);
-            //rgb(255, 250, 101)
-            // textboxes background color
-            UserTextBox.BackColor = Color.FromArgb(61, 61, 61);
-            PassTextBox.BackColor = Color.FromArgb(61, 61, 61);
-            //LoginButton
-            LoginButton.BackColor= Color.FromArgb(61, 61, 61);
-            LoginButton.ForeColor = Color.White;
-            LoginLabel.ForeColor = Color.Black;
-            LoginButton.FlatAppearance.BorderColor = Color.White;
-            ForgotPass.LinkColor = Color.White;
-            //OutButton
-            OutButton.BackColor = Color.Transparent;
-            //OutButton.FlatStyle = FlatStyle.Flat;
-            //OutButton.FlatAppearance.BorderColor= Color.Transparent;
-            MinimunButton.BackColor = Color.Transparent;
-            //MiniButton.FlatStyle = FlatStyle.Flat;          
-            //MiniButton.FlatAppearance.BorderColor = Color.Transparent;
-
+            design();
         }
 
         private void OutButton_Click(object sender, EventArgs e)
@@ -86,7 +58,7 @@ namespace QLSB
                     if (String.Compare((string)dataGridViewFake.Rows[0].Cells[0].Value, PassTextBox.Text, true) == 0)
                     {
                         this.Hide();
-                        Main a = new Main();
+                        Main a = new Main(UserTextBox.Text);
                         a.ShowDialog();
                         this.Close();
                     
@@ -102,6 +74,36 @@ namespace QLSB
                 MessageBox.Show("" + a);
             }
             
+        }
+        public void design()
+        {
+            LoginLabel.BackColor = Color.Transparent;
+
+            PanelLogin3.BackColor = Color.Transparent;
+            UserLabel.ForeColor = Color.FromArgb(255, 250, 255);
+            PassLabel.ForeColor = Color.FromArgb(255, 250, 255);
+            // textboxes background color and forcolor
+            UserTextBox.BackColor = Color.FromArgb(149, 165, 166);
+            PassTextBox.BackColor = Color.FromArgb(149, 165, 166);
+            UserTextBox.ForeColor = Color.FromArgb(255, 255, 255);
+            PassTextBox.ForeColor = Color.FromArgb(255, 255, 255);
+            //rgb(255, 250, 101)
+            // textboxes background color
+            UserTextBox.BackColor = Color.FromArgb(61, 61, 61);
+            PassTextBox.BackColor = Color.FromArgb(61, 61, 61);
+            //LoginButton
+            LoginButton.BackColor = Color.FromArgb(61, 61, 61);
+            LoginButton.ForeColor = Color.White;
+            LoginLabel.ForeColor = Color.Black;
+            LoginButton.FlatAppearance.BorderColor = Color.White;
+            ForgotPass.LinkColor = Color.White;
+            //OutButton
+            OutButton.BackColor = Color.Transparent;
+            //OutButton.FlatStyle = FlatStyle.Flat;
+            //OutButton.FlatAppearance.BorderColor= Color.Transparent;
+            MinimunButton.BackColor = Color.Transparent;
+            //MiniButton.FlatStyle = FlatStyle.Flat;          
+            //MiniButton.FlatAppearance.BorderColor = Color.Transparent;
         }
     }
 }
