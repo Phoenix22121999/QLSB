@@ -61,3 +61,4 @@ E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.Cancel.reso
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.DrinkInput.resources
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.CheckOut.resources
 E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.Confirm.resources
+E:\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\QLSB.AddStaff.resources

@@ -187,5 +187,23 @@ namespace QLSB
             textBoxID.Text = dataGridViewStaff.Rows[0].Cells[2].Value.ToString();
             textBoxID.Enabled = false;
         }
+
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            CheckOut f = new CheckOut();
+            f.ShowDialog();
+        }
+
+        private void buttonAddStaff_Click(object sender, EventArgs e)
+        {
+            AddStaff f = new AddStaff();
+            f.ShowDialog();
+        }
+
+        private void buttonAddDrink_Click(object sender, EventArgs e)
+        {
+            DrinkInput f = new DrinkInput();
+            f.ShowDialog();
+        }
     }
 }

@@ -42,12 +42,15 @@
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.dataGridViewYard = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dataGridViewStaff = new System.Windows.Forms.DataGridView();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
+            this.buttonCheckOut = new System.Windows.Forms.Button();
+            this.buttonAddStaff = new System.Windows.Forms.Button();
+            this.buttonAddDrink = new System.Windows.Forms.Button();
             this.bangsan.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewYard)).BeginInit();
@@ -77,9 +80,9 @@
             this.bangsan.Controls.Add(this.San7);
             this.bangsan.Controls.Add(this.San8);
             this.bangsan.Controls.Add(this.San9);
-            this.bangsan.Location = new System.Drawing.Point(326, 18);
+            this.bangsan.Location = new System.Drawing.Point(316, 18);
             this.bangsan.Name = "bangsan";
-            this.bangsan.Size = new System.Drawing.Size(90, 334);
+            this.bangsan.Size = new System.Drawing.Size(86, 330);
             this.bangsan.TabIndex = 1;
             // 
             // San2
@@ -166,7 +169,7 @@
             // 
             this.buttonBooking.Location = new System.Drawing.Point(12, 129);
             this.buttonBooking.Name = "buttonBooking";
-            this.buttonBooking.Size = new System.Drawing.Size(75, 23);
+            this.buttonBooking.Size = new System.Drawing.Size(85, 77);
             this.buttonBooking.TabIndex = 3;
             this.buttonBooking.Text = "Đặt Lịch";
             this.buttonBooking.UseVisualStyleBackColor = true;
@@ -185,7 +188,7 @@
             // 
             this.textBoxName.Location = new System.Drawing.Point(119, 13);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(151, 22);
+            this.textBoxName.Size = new System.Drawing.Size(138, 22);
             this.textBoxName.TabIndex = 5;
             // 
             // groupBox1
@@ -196,9 +199,25 @@
             this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Location = new System.Drawing.Point(12, 18);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 100);
+            this.groupBox1.Size = new System.Drawing.Size(275, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Location = new System.Drawing.Point(6, 44);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(48, 17);
+            this.labelID.TabIndex = 7;
+            this.labelID.Text = "CMND";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(119, 41);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(138, 22);
+            this.textBoxID.TabIndex = 6;
             // 
             // dataGridViewYard
             // 
@@ -212,9 +231,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(93, 129);
+            this.button2.Location = new System.Drawing.Point(114, 129);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 23);
+            this.button2.Size = new System.Drawing.Size(79, 77);
             this.button2.TabIndex = 8;
             this.button2.Text = "Đặt Nước";
             this.button2.UseVisualStyleBackColor = true;
@@ -222,9 +241,9 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(12, 164);
+            this.buttonCancel.Location = new System.Drawing.Point(12, 234);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(85, 73);
             this.buttonCancel.TabIndex = 9;
             this.buttonCancel.Text = "Hủy Lịch";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -240,28 +259,45 @@
             this.dataGridViewStaff.Size = new System.Drawing.Size(0, 0);
             this.dataGridViewStaff.TabIndex = 10;
             // 
-            // textBoxID
+            // buttonCheckOut
             // 
-            this.textBoxID.Location = new System.Drawing.Point(119, 41);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(151, 22);
-            this.textBoxID.TabIndex = 6;
+            this.buttonCheckOut.Location = new System.Drawing.Point(114, 234);
+            this.buttonCheckOut.Name = "buttonCheckOut";
+            this.buttonCheckOut.Size = new System.Drawing.Size(79, 73);
+            this.buttonCheckOut.TabIndex = 11;
+            this.buttonCheckOut.Text = "Thanh Toán";
+            this.buttonCheckOut.UseVisualStyleBackColor = true;
+            this.buttonCheckOut.Click += new System.EventHandler(this.buttonCheckOut_Click);
             // 
-            // labelID
+            // buttonAddStaff
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(6, 44);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(48, 17);
-            this.labelID.TabIndex = 7;
-            this.labelID.Text = "CMND";
+            this.buttonAddStaff.Location = new System.Drawing.Point(208, 129);
+            this.buttonAddStaff.Name = "buttonAddStaff";
+            this.buttonAddStaff.Size = new System.Drawing.Size(79, 77);
+            this.buttonAddStaff.TabIndex = 12;
+            this.buttonAddStaff.Text = "Thêm Nhân Viên";
+            this.buttonAddStaff.UseVisualStyleBackColor = true;
+            this.buttonAddStaff.Click += new System.EventHandler(this.buttonAddStaff_Click);
+            // 
+            // buttonAddDrink
+            // 
+            this.buttonAddDrink.Location = new System.Drawing.Point(208, 234);
+            this.buttonAddDrink.Name = "buttonAddDrink";
+            this.buttonAddDrink.Size = new System.Drawing.Size(79, 73);
+            this.buttonAddDrink.TabIndex = 13;
+            this.buttonAddDrink.Text = "Thêm Nước Vào Kho";
+            this.buttonAddDrink.UseVisualStyleBackColor = true;
+            this.buttonAddDrink.Click += new System.EventHandler(this.buttonAddDrink_Click);
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(439, 347);
+            this.ClientSize = new System.Drawing.Size(442, 374);
+            this.Controls.Add(this.buttonAddDrink);
+            this.Controls.Add(this.buttonAddStaff);
+            this.Controls.Add(this.buttonCheckOut);
             this.Controls.Add(this.dataGridViewStaff);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.button2);
@@ -305,6 +341,9 @@
         private System.Windows.Forms.DataGridView dataGridViewStaff;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Button buttonCheckOut;
+        private System.Windows.Forms.Button buttonAddStaff;
+        private System.Windows.Forms.Button buttonAddDrink;
     }
 }
 

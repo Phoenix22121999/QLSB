@@ -1,5 +1,5 @@
-create database QLSB1
-use QLSB1
+create database QLSB
+use QLSB
 create table NhanVien
 (
 	MaNV nvarchar(20),
@@ -25,7 +25,7 @@ create table HoaDon
 	MaNgay nvarchar(20),
 	MaGio nvarchar(20),
 	San nvarchar(20),
-	MaHoaDonNuoc nvarchar(20),
+	MaHoaDonNuoc nvarchar(50),
 	MaNV nvarchar(20),
 	TongTien nvarchar(50)
 )
@@ -57,7 +57,7 @@ create table Kho
 )
 create table HoaDonNuoc
 (
-	MaHoaDonNuoc nvarchar(20),
+	MaHoaDonNuoc nvarchar(50),
 	MaNgay nvarchar(20),
 	MaGio nvarchar(20),
 	MaNuoc nvarchar(20),

@@ -26,6 +26,7 @@ namespace QLSB
         private void Login_Load(object sender, EventArgs e)
         {
             design();
+            
         }
 
         private void OutButton_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,8 +44,11 @@ namespace QLSB
 
         private void DrinkBook_Click(object sender, EventArgs e)
         {
-
-          if (waterText.Text != null && Check(valWaterStore,valWaterInput))
+            Int32.TryParse(waterText.Text, out valWaterInput);
+            Int32.TryParse(redBullText.Text, out valRedBullInput);
+            Int32.TryParse(waterText.Text, out valIceTeaInput);
+            Int32.TryParse(waterText.Text, out valStingInput);
+            if (waterText.Text != null && Check(valWaterStore,valWaterInput))
             {
                 Ex("N1");
             }
@@ -65,31 +68,43 @@ namespace QLSB
         }
         public void Ex(String MN)
         {
-            String maHoaDon = dateTimePicker1.Value.ToShortDateString() + comboBoxHour.Text + comboBoxYard.Text;
-            String lenh = "insert into HoaDonNuoc values(@MHD,@MNg,@MG,@MN,@DG)";
-            SqlConnection connection = new SqlConnection(Cons.sqlLink);
-            SqlCommand command = new SqlCommand(lenh, connection);
-            command.Parameters.Add("@MHD", maHoaDon);
-            command.Parameters.Add("@MNg", dateTimePicker1.Value.ToShortDateString());
-            command.Parameters.Add("@MG", comboBoxHour.Text);
-            connection.Open();
-            command.Parameters.Add("@MN", MN);
-            switch (MN)
+            try
             {
-                case "N1":
-                case "N3":
-                    command.Parameters.Add("@DG", 10000 * Int32.Parse(waterText.Text));
-                    break;
-                case "N2":
-                case "N4":
-                    command.Parameters.Add("@DG", 12000 * Int32.Parse(waterText.Text));
-                    break;
-                
-               
+                String maHoaDon = dateTimePicker1.Value.ToShortDateString() + comboBoxHour.Text + comboBoxYard.Text + MN;
+                String lenh = "insert into HoaDonNuoc values(@MHD,@MNg,@MG,@MN,@DG)";
+                SqlConnection connection = new SqlConnection(Cons.sqlLink);
+                SqlCommand command = new SqlCommand(lenh, connection);
+                command.Parameters.Add("@MHD", maHoaDon);
+                command.Parameters.Add("@MNg", dateTimePicker1.Value.ToShortDateString());
+                command.Parameters.Add("@MG", comboBoxHour.Text);
+                connection.Open();
+                command.Parameters.Add("@MN", MN);
+                switch (MN)
+                {
+                    case "N1":
+                        int gia = 10000 * valWaterInput;
+                        //MessageBox.Show(gia.ToString()+" "+ valWaterInput.ToString());
+                        command.Parameters.Add("@DG", gia);
+                        break;
+                    case "N3":
+                        command.Parameters.Add("@DG", 10000 * valRedBullInput);
+                        break;
+                    case "N2":
+                        command.Parameters.Add("@DG", 12000 * valIceTeaInput);
+                        break;
+                    case "N4":
+                        command.Parameters.Add("@DG", 12000 * valStingInput);
+                        break;
+
+
+                }
+
+                command.ExecuteNonQuery();
+                connection.Close();
+            }catch(Exception a) {
+                MessageBox.Show("day ne" +a);
             }
-                
-            command.ExecuteNonQuery();
-            connection.Close();
+
         }
 
         public void Con()
@@ -113,18 +128,19 @@ namespace QLSB
             }
             try
             {
-                Int32.TryParse(waterText.Text, out valWaterInput);
+                
+                
                 Int32.TryParse(dataGridViewStore.Rows[0].Cells[1].Value.ToString(), out valWaterStore);
-                Int32.TryParse(redBullText.Text, out valRedBullInput);
+                
                 Int32.TryParse(dataGridViewStore.Rows[1].Cells[1].Value.ToString(), out valRedBullStore);
-                Int32.TryParse(waterText.Text, out valIceTeaInput);
+                
                 Int32.TryParse(dataGridViewStore.Rows[2].Cells[1].Value.ToString(), out valIceteaStore);
-                Int32.TryParse(waterText.Text, out valStingInput);
+                
                 Int32.TryParse(dataGridViewStore.Rows[3].Cells[1].Value.ToString(), out valStingStore);
             }
             catch (Exception a)
             {
-                MessageBox.Show("" + a);
+                MessageBox.Show("day ne" + a);
             }
         }
         private Boolean Check(int storage, int input)

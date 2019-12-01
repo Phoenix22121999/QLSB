@@ -44,7 +44,7 @@ namespace QLSB
 
         private void buttonCheckOut_Click(object sender, EventArgs e)
         {
-            Confirm a = new Confirm(dataGridViewCheckOut.Rows[index].Cells[6].Value.ToString());
+            Confirm a = new Confirm(dataGridViewCheckOut.Rows[index].Cells[7].Value.ToString());
             a.Show();
         }
 
