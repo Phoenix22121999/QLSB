@@ -24,10 +24,18 @@ namespace QLSB
             {
                 using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
                 {
-                    DataSet data = new DataSet();
-                    String lenh = "insert into NhanVien values (" + textBoxStaffID.Text + "," + textBoxName.Text + "," + textBoxID.Text + "," + dateTimePickerBD.Value + "," + textBoxPass.Text + "," + textBoxPN.Text + ")";
                     connection.Open();
+                    String lenh = "insert into NhanVien values(@MaNV,@Ten,@ID,@namsinh,@mk,@sdt)";
+                    MessageBox.Show(lenh);
+                    
                     SqlCommand command = new SqlCommand(lenh, connection);
+                    command.Parameters.Add("@MaNV",textBoxStaffID.Text);
+                    command.Parameters.Add("@Ten", textBoxName.Text);
+                    command.Parameters.Add("@ID", textBoxID.Text);
+                    command.Parameters.Add("@namsinh",dateTimePickerBD.Value);
+                    command.Parameters.Add("@mk", textBoxPass.Text);
+                    command.Parameters.Add("@sdt", textBoxPN.Text);
+
                     command.ExecuteNonQuery();
                     connection.Close();
                    
