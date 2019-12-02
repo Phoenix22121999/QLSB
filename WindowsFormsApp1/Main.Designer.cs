@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.San1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.san1 = new System.Windows.Forms.Button();
             this.bangsan = new System.Windows.Forms.FlowLayoutPanel();
-            this.San2 = new System.Windows.Forms.Button();
-            this.San3 = new System.Windows.Forms.Button();
-            this.San4 = new System.Windows.Forms.Button();
-            this.San5 = new System.Windows.Forms.Button();
-            this.San6 = new System.Windows.Forms.Button();
-            this.San7 = new System.Windows.Forms.Button();
-            this.San8 = new System.Windows.Forms.Button();
-            this.San9 = new System.Windows.Forms.Button();
+            this.san2 = new System.Windows.Forms.Button();
+            this.san3 = new System.Windows.Forms.Button();
+            this.san4 = new System.Windows.Forms.Button();
+            this.san5 = new System.Windows.Forms.Button();
+            this.san6 = new System.Windows.Forms.Button();
+            this.san7 = new System.Windows.Forms.Button();
+            this.san8 = new System.Windows.Forms.Button();
+            this.san9 = new System.Windows.Forms.Button();
             this.buttonBooking = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.labelID = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.dataGridViewYard = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDrinkBooking = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.dataGridViewStaff = new System.Windows.Forms.DataGridView();
             this.buttonCheckOut = new System.Windows.Forms.Button();
@@ -57,113 +58,113 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
             this.SuspendLayout();
             // 
-            // San1
+            // san1
             // 
-            this.San1.Location = new System.Drawing.Point(6, 6);
-            this.San1.Margin = new System.Windows.Forms.Padding(6);
-            this.San1.Name = "San1";
-            this.San1.Size = new System.Drawing.Size(75, 23);
-            this.San1.TabIndex = 0;
-            this.San1.Text = "Sân 1";
-            this.San1.UseVisualStyleBackColor = true;
-            this.San1.Click += new System.EventHandler(this.San1_Click);
+            this.san1.Location = new System.Drawing.Point(6, 6);
+            this.san1.Margin = new System.Windows.Forms.Padding(6);
+            this.san1.Name = "san1";
+            this.san1.Size = new System.Drawing.Size(75, 23);
+            this.san1.TabIndex = 0;
+            this.san1.Text = "Sân 1";
+            this.san1.UseVisualStyleBackColor = true;
+            this.san1.Click += new System.EventHandler(this.San1_Click);
             // 
             // bangsan
             // 
             this.bangsan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bangsan.Controls.Add(this.San1);
-            this.bangsan.Controls.Add(this.San2);
-            this.bangsan.Controls.Add(this.San3);
-            this.bangsan.Controls.Add(this.San4);
-            this.bangsan.Controls.Add(this.San5);
-            this.bangsan.Controls.Add(this.San6);
-            this.bangsan.Controls.Add(this.San7);
-            this.bangsan.Controls.Add(this.San8);
-            this.bangsan.Controls.Add(this.San9);
+            this.bangsan.Controls.Add(this.san1);
+            this.bangsan.Controls.Add(this.san2);
+            this.bangsan.Controls.Add(this.san3);
+            this.bangsan.Controls.Add(this.san4);
+            this.bangsan.Controls.Add(this.san5);
+            this.bangsan.Controls.Add(this.san6);
+            this.bangsan.Controls.Add(this.san7);
+            this.bangsan.Controls.Add(this.san8);
+            this.bangsan.Controls.Add(this.san9);
             this.bangsan.Location = new System.Drawing.Point(316, 18);
             this.bangsan.Name = "bangsan";
             this.bangsan.Size = new System.Drawing.Size(86, 330);
             this.bangsan.TabIndex = 1;
             // 
-            // San2
+            // san2
             // 
-            this.San2.Location = new System.Drawing.Point(6, 41);
-            this.San2.Margin = new System.Windows.Forms.Padding(6);
-            this.San2.Name = "San2";
-            this.San2.Size = new System.Drawing.Size(75, 23);
-            this.San2.TabIndex = 1;
-            this.San2.Text = "Sân2";
-            this.San2.UseVisualStyleBackColor = true;
+            this.san2.Location = new System.Drawing.Point(6, 41);
+            this.san2.Margin = new System.Windows.Forms.Padding(6);
+            this.san2.Name = "san2";
+            this.san2.Size = new System.Drawing.Size(75, 23);
+            this.san2.TabIndex = 1;
+            this.san2.Text = "Sân2";
+            this.san2.UseVisualStyleBackColor = true;
             // 
-            // San3
+            // san3
             // 
-            this.San3.Location = new System.Drawing.Point(6, 76);
-            this.San3.Margin = new System.Windows.Forms.Padding(6);
-            this.San3.Name = "San3";
-            this.San3.Size = new System.Drawing.Size(75, 23);
-            this.San3.TabIndex = 2;
-            this.San3.Text = "Sân 3";
-            this.San3.UseVisualStyleBackColor = true;
+            this.san3.Location = new System.Drawing.Point(6, 76);
+            this.san3.Margin = new System.Windows.Forms.Padding(6);
+            this.san3.Name = "san3";
+            this.san3.Size = new System.Drawing.Size(75, 23);
+            this.san3.TabIndex = 2;
+            this.san3.Text = "Sân 3";
+            this.san3.UseVisualStyleBackColor = true;
             // 
-            // San4
+            // san4
             // 
-            this.San4.Location = new System.Drawing.Point(6, 111);
-            this.San4.Margin = new System.Windows.Forms.Padding(6);
-            this.San4.Name = "San4";
-            this.San4.Size = new System.Drawing.Size(75, 23);
-            this.San4.TabIndex = 3;
-            this.San4.Text = "Sân 4";
-            this.San4.UseVisualStyleBackColor = true;
+            this.san4.Location = new System.Drawing.Point(6, 111);
+            this.san4.Margin = new System.Windows.Forms.Padding(6);
+            this.san4.Name = "san4";
+            this.san4.Size = new System.Drawing.Size(75, 23);
+            this.san4.TabIndex = 3;
+            this.san4.Text = "Sân 4";
+            this.san4.UseVisualStyleBackColor = true;
             // 
-            // San5
+            // san5
             // 
-            this.San5.Location = new System.Drawing.Point(6, 146);
-            this.San5.Margin = new System.Windows.Forms.Padding(6);
-            this.San5.Name = "San5";
-            this.San5.Size = new System.Drawing.Size(75, 23);
-            this.San5.TabIndex = 4;
-            this.San5.Text = "Sân 5";
-            this.San5.UseVisualStyleBackColor = true;
+            this.san5.Location = new System.Drawing.Point(6, 146);
+            this.san5.Margin = new System.Windows.Forms.Padding(6);
+            this.san5.Name = "san5";
+            this.san5.Size = new System.Drawing.Size(75, 23);
+            this.san5.TabIndex = 4;
+            this.san5.Text = "Sân 5";
+            this.san5.UseVisualStyleBackColor = true;
             // 
-            // San6
+            // san6
             // 
-            this.San6.Location = new System.Drawing.Point(6, 181);
-            this.San6.Margin = new System.Windows.Forms.Padding(6);
-            this.San6.Name = "San6";
-            this.San6.Size = new System.Drawing.Size(75, 23);
-            this.San6.TabIndex = 5;
-            this.San6.Text = "Sân 6";
-            this.San6.UseVisualStyleBackColor = true;
+            this.san6.Location = new System.Drawing.Point(6, 181);
+            this.san6.Margin = new System.Windows.Forms.Padding(6);
+            this.san6.Name = "san6";
+            this.san6.Size = new System.Drawing.Size(75, 23);
+            this.san6.TabIndex = 5;
+            this.san6.Text = "Sân 6";
+            this.san6.UseVisualStyleBackColor = true;
             // 
-            // San7
+            // san7
             // 
-            this.San7.Location = new System.Drawing.Point(6, 216);
-            this.San7.Margin = new System.Windows.Forms.Padding(6);
-            this.San7.Name = "San7";
-            this.San7.Size = new System.Drawing.Size(75, 23);
-            this.San7.TabIndex = 6;
-            this.San7.Text = "Sân 7";
-            this.San7.UseVisualStyleBackColor = true;
+            this.san7.Location = new System.Drawing.Point(6, 216);
+            this.san7.Margin = new System.Windows.Forms.Padding(6);
+            this.san7.Name = "san7";
+            this.san7.Size = new System.Drawing.Size(75, 23);
+            this.san7.TabIndex = 6;
+            this.san7.Text = "Sân 7";
+            this.san7.UseVisualStyleBackColor = true;
             // 
-            // San8
+            // san8
             // 
-            this.San8.Location = new System.Drawing.Point(6, 251);
-            this.San8.Margin = new System.Windows.Forms.Padding(6);
-            this.San8.Name = "San8";
-            this.San8.Size = new System.Drawing.Size(75, 23);
-            this.San8.TabIndex = 5;
-            this.San8.Text = "Sân 8";
-            this.San8.UseVisualStyleBackColor = true;
+            this.san8.Location = new System.Drawing.Point(6, 251);
+            this.san8.Margin = new System.Windows.Forms.Padding(6);
+            this.san8.Name = "san8";
+            this.san8.Size = new System.Drawing.Size(75, 23);
+            this.san8.TabIndex = 5;
+            this.san8.Text = "Sân 8";
+            this.san8.UseVisualStyleBackColor = true;
             // 
-            // San9
+            // san9
             // 
-            this.San9.Location = new System.Drawing.Point(6, 286);
-            this.San9.Margin = new System.Windows.Forms.Padding(6);
-            this.San9.Name = "San9";
-            this.San9.Size = new System.Drawing.Size(75, 23);
-            this.San9.TabIndex = 7;
-            this.San9.Text = "Sân 9";
-            this.San9.UseVisualStyleBackColor = true;
+            this.san9.Location = new System.Drawing.Point(6, 286);
+            this.san9.Margin = new System.Windows.Forms.Padding(6);
+            this.san9.Name = "san9";
+            this.san9.Size = new System.Drawing.Size(75, 23);
+            this.san9.TabIndex = 7;
+            this.san9.Text = "Sân 9";
+            this.san9.UseVisualStyleBackColor = true;
             // 
             // buttonBooking
             // 
@@ -229,19 +230,19 @@
             this.dataGridViewYard.Size = new System.Drawing.Size(0, 0);
             this.dataGridViewYard.TabIndex = 7;
             // 
-            // button2
+            // buttonDrinkBooking
             // 
-            this.button2.Location = new System.Drawing.Point(114, 129);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 77);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Đặt Nước";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.buttonDrinkBooking.Location = new System.Drawing.Point(114, 129);
+            this.buttonDrinkBooking.Name = "buttonDrinkBooking";
+            this.buttonDrinkBooking.Size = new System.Drawing.Size(79, 77);
+            this.buttonDrinkBooking.TabIndex = 8;
+            this.buttonDrinkBooking.Text = "Đặt Nước";
+            this.buttonDrinkBooking.UseVisualStyleBackColor = true;
+            this.buttonDrinkBooking.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(12, 234);
+            this.buttonCancel.Location = new System.Drawing.Point(12, 254);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(85, 73);
             this.buttonCancel.TabIndex = 9;
@@ -261,7 +262,7 @@
             // 
             // buttonCheckOut
             // 
-            this.buttonCheckOut.Location = new System.Drawing.Point(114, 234);
+            this.buttonCheckOut.Location = new System.Drawing.Point(114, 254);
             this.buttonCheckOut.Name = "buttonCheckOut";
             this.buttonCheckOut.Size = new System.Drawing.Size(79, 73);
             this.buttonCheckOut.TabIndex = 11;
@@ -281,7 +282,7 @@
             // 
             // buttonAddDrink
             // 
-            this.buttonAddDrink.Location = new System.Drawing.Point(208, 234);
+            this.buttonAddDrink.Location = new System.Drawing.Point(208, 254);
             this.buttonAddDrink.Name = "buttonAddDrink";
             this.buttonAddDrink.Size = new System.Drawing.Size(79, 73);
             this.buttonAddDrink.TabIndex = 13;
@@ -300,12 +301,13 @@
             this.Controls.Add(this.buttonCheckOut);
             this.Controls.Add(this.dataGridViewStaff);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonDrinkBooking);
             this.Controls.Add(this.dataGridViewYard);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonBooking);
             this.Controls.Add(this.bangsan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sân Bóng Mini";
@@ -321,22 +323,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Button San1;
+        private System.Windows.Forms.Button san1;
         private System.Windows.Forms.FlowLayoutPanel bangsan;
         private System.Windows.Forms.Button buttonBooking;
-        private System.Windows.Forms.Button San2;
-        private System.Windows.Forms.Button San3;
-        private System.Windows.Forms.Button San4;
-        private System.Windows.Forms.Button San5;
-        private System.Windows.Forms.Button San6;
-        private System.Windows.Forms.Button San7;
-        private System.Windows.Forms.Button San8;
-        private System.Windows.Forms.Button San9;
+        private System.Windows.Forms.Button san2;
+        private System.Windows.Forms.Button san3;
+        private System.Windows.Forms.Button san4;
+        private System.Windows.Forms.Button san5;
+        private System.Windows.Forms.Button san6;
+        private System.Windows.Forms.Button san7;
+        private System.Windows.Forms.Button san8;
+        private System.Windows.Forms.Button san9;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewYard;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDrinkBooking;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.DataGridView dataGridViewStaff;
         private System.Windows.Forms.Label labelID;

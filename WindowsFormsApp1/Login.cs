@@ -26,7 +26,7 @@ namespace QLSB
         private void Login_Load(object sender, EventArgs e)
         {
             design();
-            
+            userTextBox.CharacterCasing = CharacterCasing.Upper;
         }
 
         private void OutButton_Click(object sender, EventArgs e)
@@ -50,16 +50,16 @@ namespace QLSB
                 {
                     DataSet data = new DataSet();
                     connection.Open();
-                    String lenh = "select Makhau from NhanVien where MaNV like " + "'" + UserTextBox.Text + "'";
+                    String lenh = "select Makhau from NhanVien where MaNV like " + "'" + userTextBox.Text + "'";
                     SqlDataAdapter adapter = new SqlDataAdapter(lenh, connection);
                     adapter.Fill(data);
                     dataGridViewFake.DataSource = data.Tables[0];
                     connection.Close();
 
-                    if (String.Compare((string)dataGridViewFake.Rows[0].Cells[0].Value, PassTextBox.Text, true) == 0)
+                    if (String.Compare((string)dataGridViewFake.Rows[0].Cells[0].Value, passTextBox.Text, true) == 0)
                     {
                         this.Hide();
-                        Main a = new Main(UserTextBox.Text);
+                        Main a = new Main(userTextBox.Text);
                         a.ShowDialog();
                         this.Close();
                     
@@ -78,26 +78,26 @@ namespace QLSB
         }
         public void design()
         {
-            LoginLabel.BackColor = Color.Transparent;
+            loginLabel.BackColor = Color.Transparent;
 
-            PanelLogin3.BackColor = Color.Transparent;
-            UserLabel.ForeColor = Color.FromArgb(255, 250, 255);
-            PassLabel.ForeColor = Color.FromArgb(255, 250, 255);
+            panelLogin3.BackColor = Color.Transparent;
+            userLabel.ForeColor = Color.FromArgb(255, 250, 255);
+            passLabel.ForeColor = Color.FromArgb(255, 250, 255);
             // textboxes background color and forcolor
-            UserTextBox.BackColor = Color.FromArgb(149, 165, 166);
-            PassTextBox.BackColor = Color.FromArgb(149, 165, 166);
-            UserTextBox.ForeColor = Color.FromArgb(255, 255, 255);
-            PassTextBox.ForeColor = Color.FromArgb(255, 255, 255);
+            userTextBox.BackColor = Color.FromArgb(149, 165, 166);
+            passTextBox.BackColor = Color.FromArgb(149, 165, 166);
+            userTextBox.ForeColor = Color.FromArgb(255, 255, 255);
+            passTextBox.ForeColor = Color.FromArgb(255, 255, 255);
             //rgb(255, 250, 101)
             // textboxes background color
-            UserTextBox.BackColor = Color.FromArgb(61, 61, 61);
-            PassTextBox.BackColor = Color.FromArgb(61, 61, 61);
+            userTextBox.BackColor = Color.FromArgb(61, 61, 61);
+            passTextBox.BackColor = Color.FromArgb(61, 61, 61);
             //LoginButton
-            LoginButton.BackColor = Color.FromArgb(61, 61, 61);
-            LoginButton.ForeColor = Color.White;
-            LoginLabel.ForeColor = Color.Black;
-            LoginButton.FlatAppearance.BorderColor = Color.White;
-            ForgotPass.LinkColor = Color.White;
+            loginButton.BackColor = Color.FromArgb(61, 61, 61);
+            loginButton.ForeColor = Color.White;
+            loginLabel.ForeColor = Color.Black;
+            loginButton.FlatAppearance.BorderColor = Color.White;
+            forgotPass.LinkColor = Color.White;
             //OutButton
             OutButton.BackColor = Color.Transparent;
             //OutButton.FlatStyle = FlatStyle.Flat;

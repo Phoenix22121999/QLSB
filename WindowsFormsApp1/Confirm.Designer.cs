@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirm));
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.labelSumMoney = new System.Windows.Forms.Label();
             this.labelMoney = new System.Windows.Forms.Label();
@@ -78,6 +79,7 @@
             this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.labelSumMoney);
             this.Controls.Add(this.buttonConfirm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Confirm";
             this.Text = "Confirm";
             this.Load += new System.EventHandler(this.Confirm_Load);

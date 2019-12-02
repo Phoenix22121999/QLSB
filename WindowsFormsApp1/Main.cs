@@ -22,42 +22,42 @@ namespace QLSB
         protected int sosan = 2;
         private void button2_Click(object sender, EventArgs e)
         {
-            Button button = new Button();
-            button.Text = "Sân " + sosan;
-            button.Name = "san" + sosan;
-            Form f =taoForm(sosan);
+           // Button button = new Button();
+           // button.Text = "Sân " + sosan;
+           // button.Name = "san" + sosan;
+           // Form f =taoForm(sosan);
             
-            sosan++;
+           // sosan++;
          
-           button.Click += San2_Click;
-            bangsan.Controls.Add(button);
+           //button.Click += San2_Click;
+           // bangsan.Controls.Add(button);
         }
 
         private void San1_Click(object sender, EventArgs e)
         {
-            MonthCalendar f = new MonthCalendar();
-            f.Text = "Sân 1";
-            f.Show();
+            //MonthCalendar f = new MonthCalendar();
+            //f.Text = "Sân 1";
+            //f.Show();
         }
         private void San2_Click(object sender, EventArgs e)
         {
-            MonthCalendar f = new MonthCalendar();
-            f.Text = "Sân 2";
-            f.Show();
+            //MonthCalendar f = new MonthCalendar();
+            //f.Text = "Sân 2";
+            //f.Show();
         }
         private void San3_Click(object sender, EventArgs e)
         {
-            MonthCalendar f = new MonthCalendar();
-            f.Text = "Sân 1";
-            f.Show();
+            //MonthCalendar f = new MonthCalendar();
+            //f.Text = "Sân 1";
+            //f.Show();
         }
 
-        private Form taoForm(int sosan)
-        {
-            MonthCalendar f = new MonthCalendar();
-            f.Text = "Sân "+sosan;
-            return f;
-        }
+        //private Form taoForm(int sosan)
+        //{
+        //    //MonthCalendar f = new MonthCalendar();
+        //    //f.Text = "Sân "+sosan;
+        //    //return f;
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -103,31 +103,31 @@ namespace QLSB
                 {
                     switch (Convert.ToInt32(i))
                     {
-                        case 2: San1.BackColor = Color.Green;
+                        case 2: san1.BackColor = Color.Green;
                             break;
                         case 3:
-                            San2.BackColor = Color.Green;
+                            san2.BackColor = Color.Green;
                             break;
                         case 4:
-                            San3.BackColor = Color.Green;
+                            san3.BackColor = Color.Green;
                             break;
                         case 5:
-                            San4.BackColor = Color.Green;
+                            san4.BackColor = Color.Green;
                             break;
                         case 6:
-                            San5.BackColor = Color.Green;
+                            san5.BackColor = Color.Green;
                             break;
                         case 7:
-                            San6.BackColor = Color.Green;
+                            san6.BackColor = Color.Green;
                             break;
                         case 8:
-                            San7.BackColor = Color.Green;
+                            san7.BackColor = Color.Green;
                             break;
                         case 9:
-                            San8.BackColor = Color.Green;
+                            san8.BackColor = Color.Green;
                             break;
                         case 10:
-                            San9.BackColor = Color.Green;
+                            san9.BackColor = Color.Green;
                             break;
                     }
                     

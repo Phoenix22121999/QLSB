@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DrinkInput));
             this.groupBoxDrink = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -203,6 +204,7 @@
             this.Controls.Add(this.buttonInput);
             this.Controls.Add(this.groupBoxDrink);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DrinkInput";
             this.Text = "Nhập Nước";
             this.Load += new System.EventHandler(this.DrinkInput_Load);

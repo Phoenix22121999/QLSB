@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckOut));
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.buttonFind = new System.Windows.Forms.Button();
             this.dataGridViewCheckOut = new System.Windows.Forms.DataGridView();
@@ -95,6 +96,7 @@
             this.Controls.Add(this.dataGridViewCheckOut);
             this.Controls.Add(this.cancelID);
             this.Controls.Add(this.IDLable);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckOut";
             this.Text = "Thanh Toán";
             this.Load += new System.EventHandler(this.CheckOut_Load);

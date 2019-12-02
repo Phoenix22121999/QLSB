@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cancel));
             this.cancelID = new System.Windows.Forms.TextBox();
             this.IDLable = new System.Windows.Forms.Label();
             this.dataGridViewCancel = new System.Windows.Forms.DataGridView();
@@ -61,7 +62,7 @@
             this.dataGridViewCancel.Name = "dataGridViewCancel";
             this.dataGridViewCancel.RowHeadersWidth = 51;
             this.dataGridViewCancel.RowTemplate.Height = 24;
-            this.dataGridViewCancel.Size = new System.Drawing.Size(536, 82);
+            this.dataGridViewCancel.Size = new System.Drawing.Size(536, 154);
             this.dataGridViewCancel.TabIndex = 10;
             this.dataGridViewCancel.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCancel_CellClick);
             // 
@@ -89,13 +90,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 126);
+            this.ClientSize = new System.Drawing.Size(773, 206);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonFind);
             this.Controls.Add(this.dataGridViewCancel);
             this.Controls.Add(this.cancelID);
             this.Controls.Add(this.IDLable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cancel";
             this.Text = "Cancel";
             this.Load += new System.EventHandler(this.Cancel_Load);
