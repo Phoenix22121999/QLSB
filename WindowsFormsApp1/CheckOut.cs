@@ -27,7 +27,7 @@ namespace QLSB
 
         private void buttonFind_Click(object sender, EventArgs e)
         {
-            String lenh = "select HoaDon.* from Khach,HoaDon where Khach.CMND = " + "'" + cancelID.Text + "'";
+            String lenh = "select HoaDon.* from Khach,HoaDon where Khach.CMND = " + "'" + cancelID.Text + "' and HoaDon.MaKhach = Khach.MaKhach";
             //MessageBox.Show(lenh);
             DataSet data = new DataSet();
             using (SqlConnection connection = new SqlConnection(Cons.sqlLink))

@@ -158,6 +158,7 @@
             // 
             // AddStaff
             // 
+            this.AcceptButton = this.buttonAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(224, 386);
@@ -177,6 +178,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddStaff";
             this.Text = "AddStaff";
+            this.Load += new System.EventHandler(this.AddStaff_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

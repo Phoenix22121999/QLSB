@@ -20,45 +20,7 @@ namespace QLSB
             InitializeComponent();
         }
         protected int sosan = 2;
-        private void button2_Click(object sender, EventArgs e)
-        {
-           // Button button = new Button();
-           // button.Text = "Sân " + sosan;
-           // button.Name = "san" + sosan;
-           // Form f =taoForm(sosan);
-            
-           // sosan++;
-         
-           //button.Click += San2_Click;
-           // bangsan.Controls.Add(button);
-        }
-
-        private void San1_Click(object sender, EventArgs e)
-        {
-            //MonthCalendar f = new MonthCalendar();
-            //f.Text = "Sân 1";
-            //f.Show();
-        }
-        private void San2_Click(object sender, EventArgs e)
-        {
-            //MonthCalendar f = new MonthCalendar();
-            //f.Text = "Sân 2";
-            //f.Show();
-        }
-        private void San3_Click(object sender, EventArgs e)
-        {
-            //MonthCalendar f = new MonthCalendar();
-            //f.Text = "Sân 1";
-            //f.Show();
-        }
-
-        //private Form taoForm(int sosan)
-        //{
-        //    //MonthCalendar f = new MonthCalendar();
-        //    //f.Text = "Sân "+sosan;
-        //    //return f;
-        //}
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
             MonthCalendar f = new MonthCalendar();
@@ -76,7 +38,7 @@ namespace QLSB
         {
             DateTime now = DateTime.Now;
             String DateNow= now.ToShortDateString();
-            YardLoad();
+            yardLoad();
             loadData();
             try
             {
@@ -89,13 +51,14 @@ namespace QLSB
 
 
         }
-        public void YardLoad()
+        public void yardLoad()
         {
             DateTime day1 = DateTime.Now.Date;
             dataGridViewYard.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewYard.DataSource = getDailyCalendar(day1.ToShortDateString()).Tables[0];
+            String Hour = DateTime.Now.Hour.ToString() + "h-" + DateTime.Now.AddHours(1).Hour.ToString() + "h";
+            dataGridViewYard.DataSource = getDailyCalendar(day1.ToShortDateString(),Hour).Tables[0];
             dataGridViewYard.ReadOnly = true;
-            String Hour = DateTime.Now.Hour.ToString()+"h-"+ DateTime.Now.AddHours(1).Hour.ToString()+"h";
+            
             //MessageBox.Show(Hour);
             for(int i= 2; i<= 10; i++)
             {
@@ -137,12 +100,12 @@ namespace QLSB
             
 
         }
-        DataSet getDailyCalendar(String MaNgay)
+        DataSet getDailyCalendar(String MaNgay, String MaGio)
         {
             DataSet data = new DataSet();
             // SLQ connection
 
-            String lenh = "select * from Lich where Lich.MaNgay like " + "'" + MaNgay + "'";
+            String lenh = "select * from Lich where Lich.MaNgay = " + "'" + MaNgay + "' and Lich.MaGio =" + "'" + MaGio + "'";
             //MessageBox.Show(lenh);
             using (SqlConnection connection = new SqlConnection(Cons.sqlLink))
             {

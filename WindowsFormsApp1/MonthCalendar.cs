@@ -197,7 +197,7 @@ namespace QLSB
         private void BookingButton_Click(object sender, EventArgs e)
         {
             Booking book = new Booking(DatePickerForMonth.Value);
-            MessageBox.Show(DatePickerForMonth.Value.ToString());
+            //MessageBox.Show(DatePickerForMonth.Value.ToString());
             //book.FormClosed += new FormClosedEventHandler(ChildFormClosing);
             book.ShowDialog();
             //if (book.ShowDialog()== DialogResult.OK)

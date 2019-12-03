@@ -65,6 +65,7 @@ namespace QLSB
                     command.Parameters.Add("@TenKhach", BookName.Text);
                     command.Parameters.Add("@CMND", BookID.Text);
                     command.Parameters.Add("@SDT", BookPhoneNumber.Text);
+                    command.ExecuteNonQuery();
                     switch (YardComboBox.Text)
                     {
                         case "Sân 1":
@@ -186,7 +187,7 @@ namespace QLSB
                     Close();
                     }catch(Exception a)
                     {
-                        MessageBox.Show("Đã xảy ra lỗi");
+                        MessageBox.Show("Đã xảy ra lỗi " );
                     }
 
                 }
@@ -195,7 +196,7 @@ namespace QLSB
             }
            catch(Exception a)
            {
-                MessageBox.Show("Đã xảy ra lỗi");
+                MessageBox.Show("Đã xảy ra lỗi"+ " " + a);
            }
           
        }
@@ -245,9 +246,9 @@ namespace QLSB
             hourLabel.BackColor = Color.Transparent;
             yardLable.BackColor = Color.Transparent;
             iDLabel.ForeColor = Color.White;
-            BookingButton.BackColor = Color.FromArgb(255,75,75,75);
-            BookingButton.FlatAppearance.BorderColor = Color.FromArgb(255, 0, 0, 0);
-            BookingButton.ForeColor = Color.White;
+            bookingButton.BackColor = Color.FromArgb(255,75,75,75);
+            bookingButton.FlatAppearance.BorderColor = Color.FromArgb(255, 0, 0, 0);
+            bookingButton.ForeColor = Color.White;
             nameLabel.ForeColor = Color.White;
             numberPhoneLable.ForeColor = Color.White;
             hourLabel.ForeColor = Color.White;

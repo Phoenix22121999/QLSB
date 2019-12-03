@@ -26,7 +26,7 @@ namespace QLSB
                 {
                     connection.Open();
                     String lenh = "insert into NhanVien values(@MaNV,@Ten,@ID,@namsinh,@mk,@sdt)";
-                    MessageBox.Show(lenh);
+                    //MessageBox.Show(lenh);
                     
                     SqlCommand command = new SqlCommand(lenh, connection);
                     command.Parameters.Add("@MaNV",textBoxStaffID.Text);
@@ -37,6 +37,7 @@ namespace QLSB
                     command.Parameters.Add("@sdt", textBoxPN.Text);
 
                     command.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công");
                     connection.Close();
                    
                 }
@@ -45,6 +46,11 @@ namespace QLSB
             {
 
             }
+        }
+
+        private void AddStaff_Load(object sender, EventArgs e)
+        {
+            textBoxName.CharacterCasing = CharacterCasing.Upper;
         }
     }
 }

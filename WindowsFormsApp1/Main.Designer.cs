@@ -67,7 +67,6 @@
             this.san1.TabIndex = 0;
             this.san1.Text = "Sân 1";
             this.san1.UseVisualStyleBackColor = true;
-            this.san1.Click += new System.EventHandler(this.San1_Click);
             // 
             // bangsan
             // 
@@ -223,7 +222,7 @@
             // dataGridViewYard
             // 
             this.dataGridViewYard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewYard.Location = new System.Drawing.Point(434, 78);
+            this.dataGridViewYard.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewYard.Name = "dataGridViewYard";
             this.dataGridViewYard.RowHeadersWidth = 51;
             this.dataGridViewYard.RowTemplate.Height = 24;

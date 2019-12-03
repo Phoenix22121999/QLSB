@@ -38,7 +38,7 @@
             this.numberPhoneLable = new System.Windows.Forms.Label();
             this.hourLabel = new System.Windows.Forms.Label();
             this.HourComboBox = new System.Windows.Forms.ComboBox();
-            this.BookingButton = new System.Windows.Forms.Button();
+            this.bookingButton = new System.Windows.Forms.Button();
             this.yardLable = new System.Windows.Forms.Label();
             this.YardComboBox = new System.Windows.Forms.ComboBox();
             this.qLSBDataSet = new QLSB.QLSBDataSet();
@@ -129,17 +129,17 @@
             this.HourComboBox.Size = new System.Drawing.Size(165, 24);
             this.HourComboBox.TabIndex = 7;
             // 
-            // BookingButton
+            // bookingButton
             // 
-            this.BookingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.BookingButton.Location = new System.Drawing.Point(4, 274);
-            this.BookingButton.Margin = new System.Windows.Forms.Padding(4);
-            this.BookingButton.Name = "BookingButton";
-            this.BookingButton.Size = new System.Drawing.Size(166, 50);
-            this.BookingButton.TabIndex = 8;
-            this.BookingButton.Text = "Thuê";
-            this.BookingButton.UseVisualStyleBackColor = true;
-            this.BookingButton.Click += new System.EventHandler(this.BookingButton_Click);
+            this.bookingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.bookingButton.Location = new System.Drawing.Point(4, 274);
+            this.bookingButton.Margin = new System.Windows.Forms.Padding(4);
+            this.bookingButton.Name = "bookingButton";
+            this.bookingButton.Size = new System.Drawing.Size(166, 50);
+            this.bookingButton.TabIndex = 8;
+            this.bookingButton.Text = "Thuê";
+            this.bookingButton.UseVisualStyleBackColor = true;
+            this.bookingButton.Click += new System.EventHandler(this.BookingButton_Click);
             // 
             // yardLable
             // 
@@ -190,7 +190,7 @@
             this.panelBooking.AutoScroll = true;
             this.panelBooking.AutoSize = true;
             this.panelBooking.Controls.Add(this.nameLabel);
-            this.panelBooking.Controls.Add(this.BookingButton);
+            this.panelBooking.Controls.Add(this.bookingButton);
             this.panelBooking.Controls.Add(this.YardComboBox);
             this.panelBooking.Controls.Add(this.BookName);
             this.panelBooking.Controls.Add(this.yardLable);
@@ -208,6 +208,7 @@
             // 
             // Booking
             // 
+            this.AcceptButton = this.bookingButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
@@ -244,7 +245,7 @@
         private System.Windows.Forms.Label numberPhoneLable;
         private System.Windows.Forms.Label hourLabel;
         private System.Windows.Forms.ComboBox HourComboBox;
-        private System.Windows.Forms.Button BookingButton;
+        private System.Windows.Forms.Button bookingButton;
         private System.Windows.Forms.Label yardLable;
         private System.Windows.Forms.ComboBox YardComboBox;
         private QLSBDataSet qLSBDataSet;
